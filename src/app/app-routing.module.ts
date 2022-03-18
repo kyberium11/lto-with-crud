@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'save-platenumber',
+    loadChildren: () => import('./save-platenumber/save-platenumber.module').then( m => m.SavePlatenumberPageModule)
+  },
+  {
+    path: 'list-platenumber',
+    loadChildren: () => import('./list-platenumber/list-platenumber.module').then( m => m.ListPlatenumberPageModule)
+  },
+  {
+    path: 'view-platenumber/:key',
+    loadChildren: () => import('./view-platenumber/view-platenumber.module').then( m => m.ViewPlatenumberPageModule)
+  },
 ];
 
 @NgModule({
